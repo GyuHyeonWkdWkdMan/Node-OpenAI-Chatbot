@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const fetch = require("node-fetch"); // node-fetch 모듈 추가
-const privatekey = require("./apikey.js"); // Use your own key!!!
+const privatekey = require("./private/apikey.js"); // Use your own key!!!
 
 app.use(express.static("public"));
 app.use(express.json()); //JSON 바디를 파싱
@@ -69,3 +69,4 @@ async function fetchAIResponse(prompt) {
     return "OpenAI API 호출 중 오류 발생";
   }
 }
+//dd
